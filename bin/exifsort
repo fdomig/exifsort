@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+"use strict"
+
+var exifsort = require('../lib/exifsort'),
+	fs         = require('fs'),
+	options    = {},
+	argv       = process.argv.slice(2),
+	arg, args;
+
+var help = [
+	"usage: exifsort -in <input directory> -out <output directory>"
+].join('\n');
+
+while (arg = argv.shift()) {
+	arg = arg.match(/^--?(.+)/)[1];
+	switch (arg) {
+		case 'in':
+			options.from = argv.shift();
+			break;
+		case 'out':
+			options.to = argv.shift();
+			break;
+		case 'h':
+		case 'help':
+			console.log(help);
+			process.exit();
+	}
+}
+
+if (!options.from || !options.to) {
+	console.log(help);
+	process.exit();
+}
+
+options.callback = function(count) {
+	console.log('Sorted '+count+' files.');
+};
+
+exifsort(options);

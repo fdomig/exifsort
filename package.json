@@ -1,0 +1,21 @@
+{
+  "name": "exifsort",
+  "version": "0.0.1",
+  "description": "A tool to sort a directory of unsorted images based on exif data.",
+  "main": "lib/exifsort",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "exif",
+    "sort",
+    "pictures",
+    "jpg"
+  ],
+  "author": "Franziskus Domig",
+  "license": "MIT",
+	"dependencies": {
+    "mkdirp": "git://github.com/substack/node-mkdirp.git"
+	}
+}
