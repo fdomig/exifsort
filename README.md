@@ -5,9 +5,9 @@ date into subdirectories sorted by `year/month/day`.
 
 # Installation
 
-First install `nodejs` [1] and then run in your terminal:
+First install `nodejs` [1] and `exiftool` [2] then run in your terminal:
 
-    $ npm install exifsort
+    $ npm -g install exifsort
 
 # Usage
 
@@ -30,3 +30,4 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 [1]: http://nodejs.org
+[2]: http://www.sno.phy.queensu.ca/~phil/exiftool/
