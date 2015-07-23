@@ -16,6 +16,7 @@
   "author": "Franziskus Domig",
   "license": "MIT",
 	"dependencies": {
+    "exiv2": "latest",
     "mkdirp": "git://github.com/substack/node-mkdirp.git"
 	}
 }
